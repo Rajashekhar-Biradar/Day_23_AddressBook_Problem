@@ -105,6 +105,32 @@ namespace Address_Book_Problem
                 Console.WriteLine("Your address book is empty");
             }
         }
+        public void Delete_Person_UsingName()
+        {
+            AddPerson();
+            Console.WriteLine("enter the first name to delete that person");
+            string delete = Console.ReadLine();
+
+            foreach (Contacts person in personDetails)
+            {
+                if (person.FirstName.ToLower() == delete.ToLower())
+                {
+                    Console.WriteLine("Are you sure you want to delete this contact?(Y/N)");
+                    var n = Console.ReadKey().Key;
+                    if (n == ConsoleKey.Y)
+                    {
+                        personDetails.Remove(person);
+                        Console.WriteLine("\nContact is deleted");
+                    }
+                    Console.WriteLine("\n\nContact Deleted from the List !");
+                    return;
+                }
+                else
+                {
+                    Console.WriteLine("Contact not found");
+                }
+            }
+        }
 
     }
 }

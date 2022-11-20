@@ -1,5 +1,4 @@
 ﻿
-
 using Address_Book_Problem;
 
 Console.WriteLine("---Welcome to your Address Book--");
@@ -8,7 +7,7 @@ Console.WriteLine("---Welcome to your Address Book--");
 AddressBook1 person1 = new AddressBook1();
 while (true)
 {
-    Console.WriteLine("Choose one operation to perform:\n 1-Add a Contact \n 2-Exit from the Addressbook");
+    Console.WriteLine("Choose one operation to perform:\n 1-Add a Contact \n 2-Exit from the Addressbook\n 3-Edit details\n 4-Delete person");
     int option = Convert.ToInt32(Console.ReadLine());
     switch (option)
     {
@@ -21,6 +20,10 @@ while (true)
             Console.WriteLine("Enter any key to exit");
             break;
         case 3:
+            person1.Delete_Person_UsingName();
+            Console.WriteLine("Enter any key to exit");
+            break;
+        case 4:
             return;
         default:
             Console.WriteLine("Please enter a valid input");
