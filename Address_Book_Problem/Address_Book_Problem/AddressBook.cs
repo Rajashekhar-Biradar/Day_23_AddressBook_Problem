@@ -11,6 +11,7 @@ namespace Address_Book_Problem
     internal class AddressBook1
     {
         List<Contacts> personDetails = new List<Contacts>();
+
         public void AddPerson()
         {
             Contacts person = new Contacts();
@@ -32,6 +33,20 @@ namespace Address_Book_Problem
             Console.WriteLine("enter Email");
             person.Email = Console.ReadLine();
             personDetails.Add(person);
+
+
+        }
+        public void Add_Multiple_Person()
+        {
+            AddPerson();
+            Console.WriteLine("Do you want to add one more person detail(Y/N) : ");
+            string choice = Console.ReadLine();
+            while (choice == "y" || choice == "Y")
+            {
+                AddPerson();
+                Console.WriteLine("Do you want to add one more person detail(Y/N) : ");
+                choice = Console.ReadLine();
+            }
 
 
         }

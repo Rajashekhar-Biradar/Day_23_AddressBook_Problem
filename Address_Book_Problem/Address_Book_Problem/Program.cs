@@ -1,5 +1,4 @@
-﻿
-using Address_Book_Problem;
+﻿using Address_Book_Problem;
 
 Console.WriteLine("---Welcome to your Address Book--");
 
@@ -24,6 +23,10 @@ while (true)
             Console.WriteLine("Enter any key to exit");
             break;
         case 4:
+            person1.Add_Multiple_Person();
+            Console.WriteLine("Enter any key to exit");
+            break;
+        case 5:
             return;
         default:
             Console.WriteLine("Please enter a valid input");
